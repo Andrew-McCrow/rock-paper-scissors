@@ -22,18 +22,21 @@ function playGame() {
   // Helper function to play one round (now has access to scores)
   function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-      console.log("It's a draw!");
+        console.log(`Your choice = ${humanChoice}, Computer choice = ${computerChoice}\n`);
+        console.log("It's a draw!");
       return 'draw';
     }
     
     if ((humanChoice === 'rock' && computerChoice === 'scissors') ||
         (humanChoice === 'scissors' && computerChoice === 'paper') ||
         (humanChoice === 'paper' && computerChoice === 'rock')) {
-      console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            console.log(`Your choice = ${humanChoice}, Computer choice = ${computerChoice}\n`);
+            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
       humanScore++;
       return 'win';
     }
     
+    console.log(`Your choice = ${humanChoice}, Computer choice = ${computerChoice}\n`);
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
     computerScore++;
     return 'lose';
